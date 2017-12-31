@@ -4,6 +4,8 @@ import { ApplicationModule } from './modules/app/app.module';
 import * as express from 'express';
 import * as cors from 'cors';
 
+require('dotenv').config();
+
 function addMiddleware(instance): void {
   instance.use(cors());
 }

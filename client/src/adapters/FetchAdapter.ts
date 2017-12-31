@@ -1,6 +1,7 @@
 export class FetchAdapter {
   BASE_URL: string;
   headers: Headers;
+  
   constructor(baseUrl) {
     this.BASE_URL = baseUrl;
     this.headers = new Headers();

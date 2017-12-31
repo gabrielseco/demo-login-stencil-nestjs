@@ -1,5 +1,5 @@
 import { Component, State } from '@stencil/core';
-import { AuthService } from '../../services/LoginService';
+import { AuthService } from '../../services/AuthService';
 
 export interface LoginStateInterface {
   email: string;
@@ -19,10 +19,10 @@ export class AppHome {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
-    this.authService.signUp(this.state).then(response => {
+    this.authService.signUp(this.state)
+      .then(response => {
       console.log('response from service', response);
-    });
+    }).catch(err => console.log('error', err));
   }
 
   handleChange(event) {
