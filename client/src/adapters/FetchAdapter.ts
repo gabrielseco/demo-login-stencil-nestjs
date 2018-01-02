@@ -2,10 +2,10 @@ export class FetchAdapter {
   BASE_URL: string;
   headers: Headers;
   
-  constructor(baseUrl) {
+  constructor(baseUrl: string) {
     this.BASE_URL = baseUrl;
     this.headers = new Headers();
-    this.headers.append("Content-Type", "application/json");
+    this.headers.append('Content-Type', 'application/json');
   }
 
   post(path: string, body: object) {

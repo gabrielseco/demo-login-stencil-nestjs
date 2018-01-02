@@ -35,16 +35,13 @@ export class AppHome {
   render() {
     return (
       <div class="login-page">
-        <form onSubmit={(e) => this.handleSubmit(e)}>
+        <form class="login-page__form" onSubmit={(e) => this.handleSubmit(e)}>
           <label htmlFor="email">Email: </label>
           <input type="email" name="email" value={this.state.email} onInput={() => this.handleChange(event)}></input>
           <label htmlFor="password">Password:</label>
           <input type="password" name="password" value={this.state.password} onInput={() => this.handleChange(event)}></input>
-          <button type="submit">Send</button>
+          <button class="btn btn--primary" type="submit">Send</button>
         </form>
-        <pre>
-          {JSON.stringify(this.state, null, 4)}
-        </pre>
       </div>
     );
   }
